@@ -6,8 +6,7 @@
     text-align: justify;
 }
 h1 {
-    font-size: 20px;
-    margin-left: 20px;
+    font-size: 60px;
 }
 body {
     background: lightgoldenrodyellow;
@@ -22,21 +21,22 @@ p a {
 ul li a {
     list-style: none;
     text-decoration: none;
-    font-size: 8px;
+    font-size: 20px;
     color: rgb(83, 83, 83);
+    line-height: 200%;
 
 }
 .btn a {
     list-style: none;
-    font-size: 13px;
+    font-size: 30px;
     text-decoration: none;
     color: white;
     font-weight: bold;
-    padding-left: 10px;
+    line-height: 200%;
 }
 .btn {
-    margin-left: 330px;
     background-color: lightcoral;
-    width: 200px;
-    border-radius: 60%;
+    width: 350px;
+    border-radius: 50%;
+    margin-left: 1100px;
 }
