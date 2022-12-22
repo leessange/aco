@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/aco_me.css">
+
+    <title>아코디언 메뉴(과제)</title>
+</head>
+<body>
+    <div class="wrap">
+        <h1>&#10024;stained glass works&#128171;</h1>
+        <p class="btn"><a href="#">유럽</a>
+            <ul>
+                <li><a href="#">프랑스 파리,샤르트르 대성당</a></li>
+                <li><a href="#">영국 런던,웨스트민스터 성당</a></li>
+                <li><a href="#">독일 마인츠,성 슈테판 성당</a></li>
+            </ul>
+        </p>
+        <p class="btn"><a href="#">아시아</a>
+            <ul>
+                <li><a href="#">한국 경기도,성라자로마을 성당</a></li>
+                <li><a href="#">일본 홋카이도,오타루스테인드글라스미술관</a></li>
+                <li><a href="#">대만 가오슝,메이디라오역</a></li>
+            </ul>
+        </p>
+        <p class="btn"><a href="#">미국</a>
+            <ul>
+                <li><a href="#">미국 캘리포니아,그레이스 대성당</a></li>
+                <li><a href="#">미국 뉴욕,세인트패트릭성당</a></li>
+                <li><a href="#">미국 워싱턴,워싱턴국립성당</a></li>
+            </ul>
+        </p>
+    </div>
+
+    <script>
+        $(function(){
+            $('.btn a').on('mouseover',function(){
+                $('.btn').next('ul').filter(':visible').slideUp();
+                $(this).parent().next().slideDown();
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

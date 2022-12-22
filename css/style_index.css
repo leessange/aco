@@ -1,0 +1,93 @@
+@charset 'UTF-8';
+/* 글자가 깨지거나 하지 않음 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('../img/windmill.jpg');
+                        /* .. -> 한단계 위로 올라가서 찾아라 */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    font-family: '맑은 고딕','Adobe 고딕 Std B';
+}
+a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #283744;
+    line-height: 50PX;
+}
+ul {
+    list-style: none;
+    display: none;  /*모바일에서 리스트 보이지 않게 처리*/
+}
+nav {
+    font-size: 1.2em;
+    font-weight: bold;
+    background: #34495e;
+    width: 100%; /*100vw*/
+    position: relative;
+}
+nav ul li {
+    width: 100%;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #576979;
+}
+#trigger {
+    width: 100%;
+    display: block;
+    background-color: #283744;
+    line-height: 50px;
+    padding-left: 15px;
+    position: relative;
+}
+#trigger::after {
+    content: '';    /*t.내용없이 공간확보*/
+    background: url('../img/nav.png') no-repeat;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
+
+
+/* 미디어쿼리 삽입 */
+@media screen and (min-width:721px) {
+    nav {
+        border-bottom: 2px solid #34495e;
+        height: 40px;
+    }
+    nav ul {
+        display: block;
+        text-align: center;
+        padding: 0;
+        height: 40px;
+        width: 720px;
+        margin: 0 auto; /*가운데로 처리*/ 
+    }
+    nav ul li {
+        display: inline-block; /*옆으로 정렬*/
+        width: 120px;
+        border-right: 1px solid #576979;
+        border-bottom: 0;
+    }
+    nav ul li:last-child {
+        border-right: 0; /*마지막 오른쪽 선만 제거,양쪽에 선을 만들면 겹쳐서 굵게 처리되기 때문에 양쪽 세로선 없앤것*/
+    }
+    nav ul li a {
+        line-height: 40px;
+        font-size: 1em;
+    }
+    #trigger {
+        display: none;
+    }
+    /* 미디어쿼리는 모바일을 기준으로 먼저 만들어주면 편함 */
+}
